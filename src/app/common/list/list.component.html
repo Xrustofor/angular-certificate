@@ -1,0 +1,12 @@
+<div class="list">
+  <ul *ngIf="items.length">
+    <li
+      *ngFor="let item of items"
+      [class.active]="item.active"
+      (click)="select(item.uuid || '')"
+    >
+      <p>{{ item.commonName || '' }}</p>
+      <span *ngIf="item.active">▶</span>
+    </li>
+  </ul>
+</div>

@@ -1,25 +1,42 @@
-<main class="main">
-  <div class="content">
-    <div class="row">\
-      <ng-template  #add>
-        <button
-          class="btn"
-          (click)="save()"
-
-        >Додати</button>
-      </ng-template>
-      <button
-        class="btn"
-        (click)="back()"
-        *ngIf="show; else add"
-      >Назад</button>
+<div class="app">
+  <div class="main">
+    <div class="content">
+      <div class="app-wrap">
+        <div class="block">
+          <button class="btn">
+            <span
+              *ngIf="!addShow"
+              (click)="addShow = true"
+            >Добавити</span>
+            <span
+              *ngIf="addShow"
+              (click)="addShow = false"
+            >Відмінити</span>
+          </button>
+          <list
+            *ngIf="listItems.length; else empyBlock"
+            [items]="listItems"
+            (onSelect)="selectHandler($event)"
+          ></list>
+          <ng-template #empyBlock>
+            <p>Немає жодного сертифікату</p>
+          </ng-template>
+        </div>
+        <div class="block">
+          <drag-drop
+            *ngIf="addShow; else viewComponent"
+            (onDrop)="onDrop($event)"
+          ></drag-drop>
+          <ng-template #viewComponent>
+            <view
+              *ngIf="viewShow && !addShow"
+              [item]="item"
+            ></view>
+          </ng-template>
+        </div>
+      </div>
     </div>
-    <div class="row" [class.border]="show">
-      <router-outlet />
-    </div>
-
-    <!-- <div class="divider" role="separator" aria-label="Divider"></div> -->
   </div>
-</main>
 
+</div>
 

@@ -1,14 +1,34 @@
-main{
+.app{
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.row{
+.app-wrap{
   display: flex;
   flex: 1;
   justify-content: center;
   align-items: center;
   min-height: 400px;
+  align-items: stretch;
+}
+
+.block{
+  flex: 1;
+  padding: 8px;
+  p{
+    text-align: center;
+  }
+
+  button{
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+  button.btn{
+    padding: 0;
+    span{
+      padding: 10px 45px;
+    }
+  }
 }

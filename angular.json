@@ -32,7 +32,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/libraries/asn1/hex.js"
+            ]
           },
           "configurations": {
             "production": {

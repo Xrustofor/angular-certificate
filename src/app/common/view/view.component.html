@@ -1,0 +1,8 @@
+<div class="view">
+  <ul *ngIf="item">
+    <li><strong>Common Name: </strong> {{ item.commonName }}</li>
+    <li><strong>Issuer CN: </strong> {{ item.issuerName }}</li>
+    <li><strong>Valid From: </strong> {{ item.startDate | date: "YYYY-MM-dd" }}</li>
+    <li><strong>Valid To: </strong> {{ item.endDate | date: "YYYY-MM-dd" }}</li>
+  </ul>
+</div>

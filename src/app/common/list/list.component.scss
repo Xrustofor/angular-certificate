@@ -1,0 +1,30 @@
+.list{
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  li{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: linear .2s;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &.active:hover,
+    &:hover{
+      background: #c7c7c7;
+      transition: linear .2s;
+    }
+    &.active{
+      background: #e8e8e8;
+    }
+    span{
+      color: #696969;
+    }
+  }
+}

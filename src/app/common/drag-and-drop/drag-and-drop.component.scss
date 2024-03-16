@@ -1,0 +1,32 @@
+.drag-drop,
+.drag-drop-body {
+  height: 100%;
+}
+
+.drag-drop-body{
+  border: 1px dashed black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  .context{
+    margin-bottom: 25px;
+  }
+  input[type=file]{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+  }
+  label {
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    max-width: max-content;
+  }
+}
+

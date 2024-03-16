@@ -1,0 +1,23 @@
+.view{
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding: 15px;
+    border: 1px solid #525252;
+
+    li{
+      font-size: 18px;
+      padding: 5px 0;
+      &:first-child { padding-top: 0; }
+      &:last-child { padding-bottom: 0; }
+      font-family: Arial, Helvetica, sans-serif;
+      strong{ font-weight: 700; }
+    }
+  }
+}
+
+.view,
+.view ul{
+  height: 100%;
+}

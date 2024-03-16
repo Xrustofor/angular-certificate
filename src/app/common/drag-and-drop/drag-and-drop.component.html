@@ -1,0 +1,21 @@
+<div class="drag-drop">
+  <div
+    class="drag-drop-body"
+    draggable="true"
+    (drop)="dropHandler($event)"
+    (dragover)="dragoverHandler($event)"
+  >
+    <div class="context">
+      <p>Перетягніть файл сертифікату сюди</p>
+      <p>або</p>
+    </div>
+    <label for="upload" class="btn">Виберіть через стандартний діалог</label>
+    <input
+      type="file"
+      id="upload"
+      name="upload"
+      (change)="onFileChange($event)"
+      accept=".cer"
+    />
+  </div>
+</div>
